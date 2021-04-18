@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- student1 object with setter injection with value tag inside property tag -->
+	<bean class="com.springcore.Student" name="student1">
+	
+		<!--  
+		<property name="studentId">
+			<value>22344</value>
+		</property>
+		
+		<property name="studentName">
+			<value>Aditya Meena</value>
+		</property>
+		
+		<property name="studentAddress">
+			<value>Indore</value>
+		</property>
+		-->
+		
+		<property name="studentId" value="23424" />
+		<property name="studentName" value="john Cena" />
+		<property name="studentAddress" value="Bhopal" />
+		
+	</bean>
+
+
+
+	<!-- student2 object with setter injection with value attribute in property tag -->
+	<bean class="com.springcore.Student" name="student2">
+	
+		<property name="studentId" value="124344" />
+		<property name="studentName" value="Kane" />
+		<property name="studentAddress" value="Miami" />
+		
+	</bean>
+
+
+	<!-- student3 using constructor injection -->
+	<bean class="com.springcore.Student" name="student3" p:studentId="54321" p:studentName="Danial" p:studentAddress="Boston">
+		
+	</bean>
+
+
+</beans>
